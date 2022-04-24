@@ -1,0 +1,32 @@
+# Without nugget effect (3082 observations, 145831 pixels)
+
+> # R-squared
+> R_squared
+[1] 0.8112247
+> # Mean squared error
+> MSE
+[1] 2341.233
+> # Root mean squared error
+> RMSE
+[1] 48.38629
+> # Mean absolute error
+> MAE
+[1] 34.1586
+
+########################################################
+# With nugget effect (3082 observations, 145831 pixels)
+
+> # R-squared
+> R_squared
+[1] 0.5460467
+> # Mean squared error
+> MSE
+[1] 5630.027
+> # Root mean squared error
+> RMSE
+[1] 75.03351
+> # Mean absolute error
+> MAE
+[1] 53.88918
+
+########################################################

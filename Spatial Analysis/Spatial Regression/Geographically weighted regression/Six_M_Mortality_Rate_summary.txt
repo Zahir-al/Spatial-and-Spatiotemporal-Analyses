@@ -1,0 +1,98 @@
+================================================================================
+MGWR Version: 2.2.1
+Released on: 03/20/2020
+Source code is available at: https://github.com/pysal/mgwr
+Development Team: Ziqi Li, Taylor Oshan, Stewart Fotheringham, Wei Kang, 
+Levi Wolf, Hanchen Yu, Mehak Sachdeva, and Sarah Bardin
+Spatial Analysis Research Center (SPARC)
+Arizona State University, Tempe, USA
+================================================================================
+Model type:                                                             Gaussian
+Number of observations:                                                     3133
+Number of covariates:                                                         18
+Dependent variable:                                               Six_M_Mortality_Rate
+Variable standardization:                                                     On
+Total runtime:                                                           0:00:51
+
+Global Regression Results
+--------------------------------------------------------------------------------
+Residual sum of squares:                                                2220.805
+Log-likelihood:                                                        -3906.469
+AIC:                                                                    7848.937
+AICc:                                                                   7851.182
+R2:                                                                        0.291
+Adj. R2:                                                                   0.287
+
+Variable                                   Est.         SE  t(Est/SE)    p-value
+------------------------------------ ---------- ---------- ---------- ----------
+Intercept                                 0.000      0.015      0.000      1.000
+R_INTERNATIONAL_MIG_2018                  0.019      0.017      1.125      0.261
+Median_Household_Income_2018              0.096      0.024      3.969      0.000
+Density_per_square_mile_of_land_area_Population      0.135      0.017      7.935      0.000
+Active_Physicians_per_100000_Population_2018_AAMC      0.086      0.019      4.622      0.000
+Total_nurse_practitioners_2019            0.091      0.018      4.960      0.000
+Mean_Annual_Precipitation                 0.046      0.021      2.132      0.033
+Annual_Mean_Range_Temp                    0.043      0.022      1.948      0.051
+Cardiovascular_diseases_Mortality_Rate_2014      0.041      0.027      1.521      0.128
+Hypertensive_heart_disease_Mortality_Rate_2014      0.129      0.018      7.163      0.000
+Leukemia_Mortality_Rate_2014              0.038      0.020      1.923      0.055
+Chronic_respiratory_diseases_Mortality_Rate_2014     -0.210      0.022     -9.393      0.000
+Asthma_Mortality_Rate_2014                0.148      0.018      8.084      0.000
+percent_fair_or_poor_health               0.299      0.033      9.123      0.000
+percent_smokers                          -0.184      0.029     -6.438      0.000
+percent_physically_inactive               0.035      0.022      1.593      0.111
+percent_adults_with_diabetes              0.018      0.019      0.913      0.361
+percent_insufficient_sleep                0.180      0.025      7.179      0.000
+
+Geographically Weighted Regression (GWR) Results
+--------------------------------------------------------------------------------
+Coordinates type:                                                      Spherical
+Spatial kernel:                                                Adaptive bisquare
+Criterion for optimal bandwidth:                                             AIC
+Bandwidth used:                                                           78.000
+
+Diagnostic Information
+--------------------------------------------------------------------------------
+Residual sum of squares:                                                 596.897
+Effective number of parameters (trace(S)):                              1426.123
+Degree of freedom (n - trace(S)):                                       1706.877
+Sigma estimate:                                                            0.591
+Log-likelihood:                                                        -1848.275
+Degree of Dependency (DoD):                                                0.457
+AIC:                                                                    6550.797
+AICc:                                                                   8941.711
+BIC:                                                                   15184.528
+R2:                                                                        0.809
+Adj. R2:                                                                   0.650
+Adj. alpha (95%):                                                          0.001
+Adj. critical t value (95%):                                               3.421
+
+Summary Statistics For GWR Parameter Estimates
+--------------------------------------------------------------------------------
+Variable                        Mean        STD        Min     Median        Max
+--------------------      ---------- ---------- ---------- ---------- ----------
+Intercept                 63903227850.079 3391013217907.757   -146.592     -0.202 189539535556615.344
+R_INTERNATIONAL_MIG_2018      -0.024      0.233     -1.957     -0.002      0.746
+Median_Household_Income_2018      0.030      0.276     -1.268      0.029      1.310
+Density_per_square_mile_of_land_area_Population      0.951      8.763    -45.415      0.210     99.564
+Active_Physicians_per_100000_Population_2018_AAMC 87589201567.400 4647905125514.042   -251.053      0.009 259793083125961.156
+Total_nurse_practitioners_2019      0.046      1.750    -15.882      0.075     13.172
+Mean_Annual_Precipitation      0.093      0.651     -2.253      0.024      3.270
+Annual_Mean_Range_Temp        -0.017      0.538     -3.199     -0.038      3.291
+Cardiovascular_diseases_Mortality_Rate_2014      0.080      0.321     -1.194      0.050      2.263
+Hypertensive_heart_disease_Mortality_Rate_2014      0.014      0.313     -2.026      0.005      1.232
+Leukemia_Mortality_Rate_2014      0.009      0.259     -1.749      0.016      0.840
+Chronic_respiratory_diseases_Mortality_Rate_2014     -0.054      0.299     -1.352     -0.030      1.018
+Asthma_Mortality_Rate_2014      0.075      0.264     -1.481      0.054      1.089
+percent_fair_or_poor_health      0.271      0.587     -1.603      0.215      3.047
+percent_smokers               -0.187      0.643     -2.866     -0.140      2.421
+percent_physically_inactive      0.000      0.200     -0.776     -0.020      1.009
+percent_adults_with_diabetes      0.008      0.166     -0.650     -0.008      1.207
+percent_insufficient_sleep      0.056      0.342     -1.446      0.030      1.720
+================================================================================
+Acknowledgement:
+We acknowledge the support of the National Science Foundation under Award 1758786 
+from the Geography and Spatial Sciences Program to A. S. Fotheringham which 
+enabled this software to be written and made freely available.
+================================================================================
+
