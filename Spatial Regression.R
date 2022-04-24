@@ -214,7 +214,7 @@ lm.LMtests(reg.lm, listw1, test = c("LMerr", "LMlag", "RLMerr", "RLMlag", "SARMA
 ######################## Spatial Regression ########################
 
 ######################## Manski Model ########################
-#Manski All-inclusive Model: y=pWy+Xß+WXT+u,   u=LWu+e (not recommended)
+#Manski All-inclusive Model: y=pWy+XÃŸ+WXT+u,   u=LWu+e (not recommended)
 start.time.Manski <- Sys.time()
 reg.Manski = sacsarlm(formula, MT10_scaled_lasso, listw1, type = "sacmixed", zero.policy = TRUE)
 end.time.Manski <- Sys.time()
@@ -243,7 +243,7 @@ moran.mc(reg.Manski$residuals, listw1, 500, zero.policy = TRUE)
 
 ######################## SLX Model ########################
 #p=rho, T=theta, and L=lambda
-#SLX Spatially Lagged X y=Xß+WXT+e
+#SLX Spatially Lagged X y=XÃŸ+WXT+e
 start.time.SLX <- Sys.time()
 reg.SLX = lmSLX(formula, MT10_scaled_lasso, listw1, zero.policy = TRUE)
 end.time.SLX <- Sys.time()
@@ -278,7 +278,7 @@ summary(impacts(reg.SLX, listw = listw1, R = 500), zstats = TRUE)
 moran.mc(reg.SLX$residuals, listw1, 500, zero.policy = TRUE)
 
 ######################## SAR Model ########################
-#SAR Spatial (Simultaneous) Lag (Autoregressive) Model y=pWy+Xß+e
+#SAR Spatial (Simultaneous) Lag (Autoregressive) Model y=pWy+XÃŸ+e
 start.time.SAR <- Sys.time()
 reg.SAR = lagsarlm(formula, MT10_scaled_lasso, listw1, zero.policy = TRUE)
 end.time.SAR <- Sys.time()
@@ -312,7 +312,7 @@ summary(impacts(reg.SAR,listw = listw1,R = 500), zstats = TRUE) #Add zstats for 
 moran.mc(reg.SAR$residuals, listw1, 500, zero.policy = TRUE)
 
 ######################## SEM Model ########################
-#SEM Spatial Error Model  y=Xß+u, u=LWu+e
+#SEM Spatial Error Model  y=XÃŸ+u, u=LWu+e
 start.time.SEM <- Sys.time()
 reg.SEM = errorsarlm(formula, MT10_scaled_lasso, listw1, zero.policy = TRUE)
 end.time.SEM <- Sys.time()
@@ -351,7 +351,7 @@ Hausman.test(reg.SEM)
 #LeSage and Pace approach is to select either a spatial Durbin model or a spatial
 #Durbin error model as a starting point as we are considering some model coefficients
 #to be zero in our analysis to get simpler models.
-#SDEM Spatial Durbin Error Model (add lag X to SEM)   y=Xß+WxT+u,   u=LWu+e
+#SDEM Spatial Durbin Error Model (add lag X to SEM)   y=XÃŸ+WxT+u,   u=LWu+e
 start.time.SDEM <- Sys.time()
 reg.SDEM = errorsarlm(formula, MT10_scaled_lasso, listw1, etype = "emixed",
                       zero.policy = TRUE)
@@ -379,7 +379,7 @@ summary(impacts(reg.SDEM,listw = listw1,R = 500), zstats = TRUE) #Add zstats for
 moran.mc(reg.SDEM$residuals, listw1, 500, zero.policy = TRUE)
 
 ######################## SDM Model ########################
-#SDM Spatial Durbin Model (add lag X to SAR) y=pWy+Xß+WXT+e 
+#SDM Spatial Durbin Model (add lag X to SAR) y=pWy+XÃŸ+WXT+e 
 start.time.SDM <- Sys.time()
 reg.SDM = lagsarlm(formula, MT10_scaled_lasso, listw1, type = "mixed",
                    zero.policy = TRUE)
@@ -408,7 +408,7 @@ summary(impacts(reg.SDM,listw = listw1,R = 500), zstats = TRUE) #Add zstats for 
 moran.mc(reg.SDM$residuals, listw1, 500, zero.policy = TRUE)
 
 ######################## SARAR Model ########################
-#SARAR a.k.a. Kelejian-Prucha, Cliff-Ord, or SAC If all T=0,y=pWy+Xß+u, u=LWu+e
+#SARAR a.k.a. Kelejian-Prucha, Cliff-Ord, or SAC If all T=0,y=pWy+XÃŸ+u, u=LWu+e
 start.time.SARAR <- Sys.time()
 reg.SARAR = sacsarlm(formula, MT10_scaled_lasso, listw1, type = "sac", zero.policy = TRUE)
 end.time.SARAR <- Sys.time()
