@@ -3,5 +3,3 @@ This repository contains a variety of spatial and spatiotemporal statistical met
 
 An assortment of datasets applied in the research is also provided under the tabular and image data folders that were used for spatial and spatiotemporal analysis, respectively.
 
-In addition, the outputs of Rstudio environment codes are given as RDATA File format so as to provide a convenient way to play around with the R codes. All Python-related outputs are in their respective Jupyter Notebooks.
-
